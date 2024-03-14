@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "djangosession"
+version = "0.1.0"
+description = ""
+authors = ["sds7629 <sds7629@naver.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^5.0.3"
+djangorestframework = "^3.14.0"
+requests = "^2.31.0"
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+plugins = ['mypy_django_plugin.main']
+ignore_missing_imports = true
+python_version = 3.11
+strict = false
+
+[[tool.mypy.overrides]]
+module = "*.migrations.*"
+ignore_errors = true
+
+[[tool.mypy.overrides]]
+module = "manage"
+ignore_errors = true
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.2.0"
+isort = "^5.13.2"
+mypy = "^1.9.0"
+pytest-django = "^4.8.0"
+model-bakery = "^1.17.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
