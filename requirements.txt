@@ -3,3 +3,9 @@ django >= 5.0.1, <6.0.0
 
 # Django Rest Framework
 djangorestframework >= 3.14.0, <4.0.0
+
+#psycopg
+psycopg2-binary >= 2.9.9, < 3.0
+
+#drf-spectacular
+drf-spectacular >= 0.27.1, <0.28.0
