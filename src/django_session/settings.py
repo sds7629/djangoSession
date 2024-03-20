@@ -49,6 +49,7 @@ DEFAULT_APPS = [
 
 INSTALLED_APPS = DEFAULT_APPS + MY_APPS
 
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -79,6 +80,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'django_session.wsgi.application'
 
+AUTH_USER_MODEL = 'users.User'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
