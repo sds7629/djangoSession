@@ -15,22 +15,22 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Video',
+            name="Video",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('updated_at', models.DateTimeField(auto_now=True)),
-                ('title', models.CharField(max_length=30)),
-                ('description', models.TextField(blank=True, null=True)),
-                ('link', models.URLField()),
-                ('category', models.CharField(max_length=20)),
-                ('views_count', models.BigIntegerField(default=0)),
-                ('thumbnail', models.URLField(blank=True, null=True)),
-                ('video_file', models.FileField(upload_to='src/storage/')),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                ("created_at", models.DateTimeField(auto_now_add=True)),
+                ("updated_at", models.DateTimeField(auto_now=True)),
+                ("title", models.CharField(max_length=30)),
+                ("description", models.TextField(blank=True, null=True)),
+                ("link", models.URLField()),
+                ("category", models.CharField(max_length=20)),
+                ("views_count", models.BigIntegerField(default=0)),
+                ("thumbnail", models.URLField(blank=True, null=True)),
+                ("video_file", models.FileField(upload_to="src/storage/")),
+                ("user", models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],
             options={
-                'abstract': False,
+                "abstract": False,
             },
         ),
     ]
